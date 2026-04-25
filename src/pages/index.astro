@@ -1,0 +1,32 @@
+---
+import ContentBlock from "@components/content-block.astro";
+import Title from "@components/title.astro";
+import ApplicationLayout from "@layouts/application-layout.astro";
+---
+<ApplicationLayout>
+<div class="grid place-items-center w-full h-full bg-[#454545]">
+	<div class="flex flex-col gap-6 items-start">
+		<Title>Landbird</Title>
+		<ContentBlock category="new website">
+			coming soon
+		</ContentBlock>
+		<ContentBlock category="contact">
+			<span id="obfuscated-email"></span>
+			<script type="text/javascript">
+			  // Simple email obfuscation
+			  const user = "nancy";
+			  const domain = "landbird.com";
+			  const email = `${user}@${domain}`;
+			  const link = document.createElement('a');
+			  link.href = `mailto:${email}`;
+			  link.textContent = email;
+			  document.getElementById('obfuscated-email').appendChild(link);
+			</script>
+		</ContentBlock>
+		<ContentBlock category="stockists">
+			Seattle Art Museum Shop<br />
+			Chihuly Garden and Glass Bookstore
+		</ContentBlock>
+	</div>
+</div>
+</ApplicationLayout>
